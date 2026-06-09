@@ -1,6 +1,6 @@
 ---
 name: setup
-description: Asks you a few quick questions when you start real work on a project, so Claude knows how you want to work that session. It then keeps a running memory of what worked and what broke, and double-checks its own claims before calling anything done. Use it at the start of a work session, when you want Claude to remember things between sessions, or when you want it to check its own work as it goes. You do not need to say the word Setup.
+description: Asks you a few quick questions when you start real work on a project, so Claude knows how you want to work that session, with an optional deeper interview when you want Claude to fully understand what you are building. It then keeps a running memory of what worked and what broke, and double-checks its own claims before calling anything done. Use it at the start of a work session, when you want Claude to remember things between sessions, or when you want it to check its own work as it goes. You do not need to say the word Setup.
 trigger: /setup
 ---
 
@@ -47,6 +47,61 @@ direct, give one path and act; if they say "let's explore", offer options.
 The answers are not thrown away. They set what loads and how careful to be,
 and the work itself gets recorded (see "the shared base").
 
+## Familiarity, asked once
+
+People come to this at every level, and there is no wrong answer. Near the
+start, ask how familiar the person is with coding and engineering, so you can
+pitch everything right:
+
+```
+People come to this at all different levels, and there is no wrong answer.
+How familiar are you with coding and engineering?
+  new to this  /  some familiarity  /  comfortable, I code  /  expert
+```
+
+This sets how plainly you talk and how often you check in:
+
+```
+new to this    plain language, an analogy when it helps, frequent check-ins
+some           plain language with the real words introduced gently
+comfortable    normal technical talk, lighter check-ins
+expert         talk shop, stay out of the way
+```
+
+It is a starting point, not a cage. The person can say "go simpler" or "more
+technical" any time, and if they ever get lost, drop to plain words for that
+moment no matter what they picked. Never talk down, and never show off. The
+warmth stays the same at every level.
+
+## Interview Mode (the deeper track, when you want it)
+
+The four quick questions get you working fast. Interview Mode is for when the
+person wants Claude to really understand what they are building before it writes
+anything. It is opt-in, conversational, and low pressure: one question at a
+time, and after each answer, say back what you heard in a sentence so nothing
+gets quietly assumed.
+
+Walk through these, in plain language, one at a time:
+
+```
+1. What is this for, in your own words?
+2. Who uses it?
+3. What must it never do?
+4. What does "done" look like, in a way you could check?
+5. Where does the risk live (money, private data, anything that hurts if it breaks)?
+6. The boundaries: what should I always do, ask first about, or never do?
+```
+
+When an answer is vague, turn it into something checkable, together, before
+moving on. "Make it fast" becomes "the first screen shows up in under two and a
+half seconds on a normal phone." Never fill in an unclear answer on your own;
+ask.
+
+At the end, write the answers where the rest of the work can use them: the
+spec's six core areas (what it is, the commands, the structure, the code style,
+how it is tested, and the boundaries), and the small session file below that
+eidolon reads.
+
 ## The three parts (each loads only when needed)
 
 ```
@@ -66,10 +121,17 @@ collected.
 
 ```yaml
 # .claude/session.yaml
+familiarity: some        # new / some / comfortable / expert
 parts:     [remember, check]
 go_ahead:  cheap-steps-then-pause
 run_until: "tests pass"
 work_type: judgment
+intent:                  # filled in by Interview Mode, when it was used
+  for:    "what this is for, in plain words"
+  users:  "who uses it"
+  never:  "what it must never do"
+  done:   "what done looks like, checkable"
+  risk:   "where the risk lives"
 ```
 
 ## Keeping context across long sessions
@@ -100,8 +162,10 @@ first) live in references/collaborate.md.
 
 ## How to use this in a conversation
 
-1. At the start of real work, ask the four questions above. Keep it short.
-2. Match the person's tone. Do not over-explain.
+1. At the start of real work, ask the familiarity question once, then the four
+   quick questions. Offer Interview Mode if they want Claude to understand the
+   project more deeply first. Keep it short.
+2. Match the person's tone and their stated familiarity. Do not over-explain.
 3. Load only the parts they picked.
 4. Record decisions and corrections as you go (what broke to docs/fixes,
    what worked to docs/insights).
