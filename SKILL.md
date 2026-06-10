@@ -24,6 +24,18 @@ both_sides:   before_done and before_reuse are the same check pointed opposite w
 honesty:      label every finding as found, guessed, or unsure
 keep_short:   a rules doc stops getting read once it gets too long; retire stale rules instead of piling on
 record:       write what broke to docs/fixes, write what worked to docs/insights
+done_means:   "done" means the thing the work was for is true and you watched it be true,
+              not that a check ran clean; a passing test next to a broken result is the
+              classic miss, so name what "working" looks like before you start
+look_first:   before changing anything, take a read-only look at what is really there
+              (the data, the files, the running thing) and plan against that, not
+              against what you remember or assume
+say_what_ran: only claim what you actually ran and read back; "the tests pass" is
+              yours to say only after you ran them yourself and read the output
+run_it:       checking means running the thing and watching what happens; reading the
+              code and predicting is a guess, however confident it feels
+show_evidence: when someone says you got it wrong, answer with the evidence first
+              (the file, the line, the output), never with a defense of the decision
 ```
 
 Your names for these: before_done is your "uncertainty protocol", before_reuse
