@@ -144,7 +144,17 @@ intent:                  # filled in by Interview Mode, when it was used
   never:  "what it must never do"
   done:   "what done looks like, checkable"
   risk:   "where the risk lives"
+security:                # the session-start security tier eidolon reads (optional)
+  policy:       references/security-policy.md            # the policy an agent reads + hashes
+  attestation:  .claude/security-attestation.json        # where the signed attestation lives
+  required_for: [destructive, sensitive]                 # dispatch tiers that ASK without a valid attestation
 ```
+
+At the start of a session, eidolon surfaces this policy and the attestation
+status, and a destructive or sensitive dispatch with no valid attestation asks
+you first. The training itself lives in eidolon's
+references/security-awareness.md; here Setup just names where it lives, the same
+way it hands over the rest of the session file.
 
 ## Keeping context across long sessions
 
