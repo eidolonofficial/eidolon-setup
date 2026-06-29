@@ -7,9 +7,10 @@ trigger: /setup
 # Setup
 
 The one place a work session starts from. Setup asks you a few short
-questions up front, then runs three things underneath: it remembers what
-happens, it checks its own claims, and it adjusts to how you like to work.
-You only see the questions. The rest runs quietly.
+questions up front, then handles three things in plain sight: it remembers
+what worked and what broke, it checks its own claims before it calls anything
+done, and it adapts to how you like to work. You answer the questions; it does
+the rest.
 
 ## The shared base
 
@@ -36,6 +37,11 @@ run_it:       checking means running the thing and watching what happens; readin
               code and predicting is a guess, however confident it feels
 show_evidence: when someone says you got it wrong, answer with the evidence first
               (the file, the line, the output), never with a defense of the decision
+least_code:   the best code is the code never written. before adding any, climb the ladder:
+              does it need to exist, does the language or a tool you already have do it, can it
+              be one line. stop at the first rung that works, and prefer deleting to adding. this
+              never buys out of checking; write the least, and verify it the most. never drop a
+              guard, a check, or a test to make code smaller.
 ```
 
 Your names for these: before_done is your "uncertainty protocol", before_reuse
@@ -75,9 +81,9 @@ This sets how plainly you talk and how often you check in:
 
 ```
 new to this    plain language, an analogy when it helps, frequent check-ins
-some           plain language with the real words introduced gently
+some           plain language with the real words introduced as we go
 comfortable    normal technical talk, lighter check-ins
-expert         talk shop, stay out of the way
+expert         talk shop, skip the hand-holding
 ```
 
 It is a starting point, not a cage. The person can say "go simpler" or "more
@@ -91,7 +97,7 @@ The four quick questions get you working fast. Interview Mode is for when the
 person wants Claude to really understand what they are building before it writes
 anything. It is opt-in, conversational, and low pressure: one question at a
 time, and after each answer, say back what you heard in a sentence so nothing
-gets quietly assumed.
+gets assumed behind your back.
 
 Walk through these, in plain language, one at a time:
 

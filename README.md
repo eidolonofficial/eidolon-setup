@@ -2,10 +2,10 @@
 
 A Claude Code skill that begins a work session well.
 
-Setup asks you a few short questions up front, then runs three things quietly
-underneath: it keeps a memory of what worked and what broke, it checks its own
-claims before calling them done, and it adjusts to how you like to work. You only
-see the questions. The rest runs in the background.
+Setup asks you a few short questions up front, then handles three things in
+plain sight: it keeps a memory of what worked and what broke, it checks its own
+claims before it calls them done, and it adapts to how you like to work. You
+answer the questions; it does the rest.
 
 It is the sister skill to Eidolon. Eidolon sets up a repository so Claude
 understands it. Setup sets up a session inside it.
