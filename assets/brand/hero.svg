@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520" role="img" aria-labelledby="title desc">
+  <title id="title">Eidolon Setup</title><desc id="desc">Warm editorial banner for the Setup session skill.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F7F0E5"/><stop offset="1" stop-color="#EFE2CF"/></linearGradient>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#10212A"/><stop offset="1" stop-color="#17353A"/></linearGradient>
+    <linearGradient id="gold"><stop stop-color="#E7B06D"/><stop offset="1" stop-color="#B96D3C"/></linearGradient>
+  </defs>
+  <rect width="1600" height="520" rx="28" fill="url(#bg)"/>
+  <rect x="1040" y="0" width="560" height="520" rx="28" fill="url(#ink)"/>
+  <g transform="translate(92 92)">
+    <text x="0" y="72" fill="#13242B" font-family="Georgia, 'Times New Roman', serif" font-size="76" font-weight="700">Setup</text>
+    <text x="2" y="118" fill="#A86239" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="5">START CLEAR · STAY GROUNDED</text>
+    <line x1="0" y1="158" x2="90" y2="158" stroke="#C67B48" stroke-width="3"/>
+    <text x="0" y="216" fill="#24383D" font-family="Georgia, serif" font-size="31">A deliberate beginning for Claude Code and Codex.</text>
+    <text x="0" y="259" fill="#526368" font-family="Arial, sans-serif" font-size="20">Boundaries, verification, remembered context, and the smallest useful skill set.</text>
+    <g transform="translate(0 322)" font-family="Arial, sans-serif" font-size="18">
+      <rect x="0" y="-27" width="22" height="22" rx="5" fill="#C77A46"/><path d="M6 -16l5 5 8-10" fill="none" stroke="#FFF9EF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="38" y="-9" fill="#24383D">Reuse what is already known</text>
+      <rect x="325" y="-27" width="22" height="22" rx="5" fill="#C77A46"/><path d="M331 -16l5 5 8-10" fill="none" stroke="#FFF9EF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="363" y="-9" fill="#24383D">Ask only what matters</text>
+      <rect x="0" y="21" width="22" height="22" rx="5" fill="#C77A46"/><path d="M6 32l5 5 8-10" fill="none" stroke="#FFF9EF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="38" y="39" fill="#24383D">Choose skills from evidence</text>
+      <rect x="325" y="21" width="22" height="22" rx="5" fill="#C77A46"/><path d="M331 32l5 5 8-10" fill="none" stroke="#FFF9EF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="363" y="39" fill="#24383D">Verify before “done”</text>
+    </g>
+  </g>
+  <g transform="translate(1128 100)">
+    <rect width="330" height="322" rx="20" fill="#0B1C24" stroke="#31515A" stroke-width="2"/>
+    <circle cx="30" cy="30" r="5" fill="#C77A46"/><circle cx="48" cy="30" r="5" fill="#D7B46E"/><circle cx="66" cy="30" r="5" fill="#66B6AA"/>
+    <text x="30" y="90" fill="#EFD8AF" font-family="Arial, sans-serif" font-size="15" letter-spacing="2">TODAY'S WORK</text>
+    <text x="30" y="137" fill="#F8F0E2" font-family="Georgia, serif" font-size="27">What are we doing?</text>
+    <line x1="30" y1="160" x2="300" y2="160" stroke="#31515A"/>
+    <text x="30" y="203" fill="#AFC2C5" font-family="Arial, sans-serif" font-size="17">Context remembered</text><circle cx="288" cy="197" r="7" fill="#66B6AA"/>
+    <text x="30" y="240" fill="#AFC2C5" font-family="Arial, sans-serif" font-size="17">Risk understood</text><circle cx="288" cy="234" r="7" fill="#66B6AA"/>
+    <text x="30" y="277" fill="#AFC2C5" font-family="Arial, sans-serif" font-size="17">Right skills selected</text><circle cx="288" cy="271" r="7" fill="#D7B46E"/>
+  </g>
+</svg>
