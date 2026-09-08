@@ -1,37 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520" role="img" aria-labelledby="title desc">
-  <title id="title">Eidolon Setup</title><desc id="desc">Warm editorial banner for the Setup session skill.</desc>
+  <title id="title">Setup</title>
+  <desc id="desc">Warm editorial storybook banner for Setup, the session-start skill for Claude Code and Codex.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F7F0E5"/><stop offset="1" stop-color="#EFE2CF"/></linearGradient>
-    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#10212A"/><stop offset="1" stop-color="#17353A"/></linearGradient>
-    <linearGradient id="gold"><stop stop-color="#E7B06D"/><stop offset="1" stop-color="#B96D3C"/></linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8f0e5"/><stop offset="1" stop-color="#eadbc6"/></linearGradient>
+    <linearGradient id="night" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0a1b23"/><stop offset="1" stop-color="#17353b"/></linearGradient>
+    <linearGradient id="ember" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7d49b"/><stop offset="1" stop-color="#bd6d3d"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#f0b660" stop-opacity=".38"/><stop offset="1" stop-color="#f0b660" stop-opacity="0"/></radialGradient>
   </defs>
-  <rect width="1600" height="520" rx="28" fill="url(#bg)"/>
-  <rect x="1040" y="0" width="560" height="520" rx="28" fill="url(#ink)"/>
-  <g transform="translate(92 92)">
-    <text x="0" y="72" fill="#13242B" font-family="Georgia, 'Times New Roman', serif" font-size="76" font-weight="700">Setup</text>
-    <text x="2" y="118" fill="#A86239" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="5">START CLEAR · STAY GROUNDED</text>
-    <line x1="0" y1="158" x2="90" y2="158" stroke="#C67B48" stroke-width="3"/>
-    <text x="0" y="216" fill="#24383D" font-family="Georgia, serif" font-size="31">A deliberate beginning for Claude Code and Codex.</text>
-    <text x="0" y="259" fill="#526368" font-family="Arial, sans-serif" font-size="20">Boundaries, verification, remembered context, and the smallest useful skill set.</text>
-    <g transform="translate(0 322)" font-family="Arial, sans-serif" font-size="18">
-      <rect x="0" y="-27" width="22" height="22" rx="5" fill="#C77A46"/><path d="M6 -16l5 5 8-10" fill="none" stroke="#FFF9EF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="38" y="-9" fill="#24383D">Reuse what is already known</text>
-      <rect x="325" y="-27" width="22" height="22" rx="5" fill="#C77A46"/><path d="M331 -16l5 5 8-10" fill="none" stroke="#FFF9EF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="363" y="-9" fill="#24383D">Ask only what matters</text>
-      <rect x="0" y="21" width="22" height="22" rx="5" fill="#C77A46"/><path d="M6 32l5 5 8-10" fill="none" stroke="#FFF9EF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="38" y="39" fill="#24383D">Choose skills from evidence</text>
-      <rect x="325" y="21" width="22" height="22" rx="5" fill="#C77A46"/><path d="M331 32l5 5 8-10" fill="none" stroke="#FFF9EF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="363" y="39" fill="#24383D">Verify before “done”</text>
+  <rect width="1600" height="520" rx="28" fill="url(#paper)"/>
+  <rect x="1010" width="590" height="520" rx="28" fill="url(#night)"/>
+  <circle cx="1330" cy="240" r="250" fill="url(#glow)"/>
+
+  <g transform="translate(78 76)">
+    <text x="0" y="72" fill="#172b31" font-family="Georgia, 'Times New Roman', serif" font-size="82" font-weight="700">Setup</text>
+    <text x="2" y="117" fill="#a85e36" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="5">PREPARE · FOCUS · CREATE · BELONG</text>
+    <line x1="0" y1="154" x2="90" y2="154" stroke="#c77945" stroke-width="3"/>
+    <text x="0" y="210" fill="#263b40" font-family="Georgia, serif" font-size="31">A deliberate beginning for every working session.</text>
+    <text x="0" y="251" fill="#263b40" font-family="Georgia, serif" font-size="31">Load what matters. Leave the rest on the shelf.</text>
+    <text x="0" y="296" fill="#65757a" font-family="Arial, sans-serif" font-size="19">Context-aware, evidence-based, and shared across Claude Code and Codex.</text>
+
+    <g transform="translate(0 338)" font-family="Arial, sans-serif" font-size="17">
+      <g><circle cx="10" cy="10" r="10" fill="#c77a46"/><text x="31" y="16" fill="#30444a">Recall</text></g>
+      <path d="M101 10h40" stroke="#a3a6a0" stroke-width="2"/><path d="M136 5l8 5-8 5" fill="none" stroke="#b46e40" stroke-width="2"/>
+      <g transform="translate(158 0)"><circle cx="10" cy="10" r="10" fill="#c77a46"/><text x="31" y="16" fill="#30444a">Clarify</text></g>
+      <path d="M270 10h40" stroke="#a3a6a0" stroke-width="2"/><path d="M305 5l8 5-8 5" fill="none" stroke="#b46e40" stroke-width="2"/>
+      <g transform="translate(326 0)"><circle cx="10" cy="10" r="10" fill="#c77a46"/><text x="31" y="16" fill="#30444a">Select</text></g>
+      <path d="M430 10h40" stroke="#a3a6a0" stroke-width="2"/><path d="M465 5l8 5-8 5" fill="none" stroke="#b46e40" stroke-width="2"/>
+      <g transform="translate(486 0)"><circle cx="10" cy="10" r="10" fill="#c77a46"/><text x="31" y="16" fill="#30444a">Bound</text></g>
+      <path d="M590 10h40" stroke="#a3a6a0" stroke-width="2"/><path d="M625 5l8 5-8 5" fill="none" stroke="#b46e40" stroke-width="2"/>
+      <g transform="translate(646 0)"><circle cx="10" cy="10" r="10" fill="#c77a46"/><text x="31" y="16" fill="#30444a">Verify</text></g>
+    </g>
+
+    <g transform="translate(0 408)" font-family="Arial, sans-serif" font-size="15" font-weight="700">
+      <rect width="174" height="40" rx="20" fill="#17323a"/><text x="87" y="25" text-anchor="middle" fill="#f7ede0">Claude Code</text>
+      <rect x="188" width="136" height="40" rx="20" fill="#f3dfc1" stroke="#c78550"/><text x="256" y="25" text-anchor="middle" fill="#21383e">Codex</text>
+      <rect x="338" width="226" height="40" rx="20" fill="#f3dfc1" stroke="#c78550"/><text x="451" y="25" text-anchor="middle" fill="#21383e">Smallest useful set</text>
+      <rect x="578" width="206" height="40" rx="20" fill="#f3dfc1" stroke="#c78550"/><text x="681" y="25" text-anchor="middle" fill="#21383e">No repeated asks</text>
     </g>
   </g>
-  <g transform="translate(1128 100)">
-    <rect width="330" height="322" rx="20" fill="#0B1C24" stroke="#31515A" stroke-width="2"/>
-    <circle cx="30" cy="30" r="5" fill="#C77A46"/><circle cx="48" cy="30" r="5" fill="#D7B46E"/><circle cx="66" cy="30" r="5" fill="#66B6AA"/>
-    <text x="30" y="90" fill="#EFD8AF" font-family="Arial, sans-serif" font-size="15" letter-spacing="2">TODAY'S WORK</text>
-    <text x="30" y="137" fill="#F8F0E2" font-family="Georgia, serif" font-size="27">What are we doing?</text>
-    <line x1="30" y1="160" x2="300" y2="160" stroke="#31515A"/>
-    <text x="30" y="203" fill="#AFC2C5" font-family="Arial, sans-serif" font-size="17">Context remembered</text><circle cx="288" cy="197" r="7" fill="#66B6AA"/>
-    <text x="30" y="240" fill="#AFC2C5" font-family="Arial, sans-serif" font-size="17">Risk understood</text><circle cx="288" cy="234" r="7" fill="#66B6AA"/>
-    <text x="30" y="277" fill="#AFC2C5" font-family="Arial, sans-serif" font-size="17">Right skills selected</text><circle cx="288" cy="271" r="7" fill="#D7B46E"/>
+
+  <!-- open worktable book -->
+  <g transform="translate(1070 94)">
+    <path d="M20 98c95-28 171-18 235 25v232c-78-37-154-42-235-18z" fill="#efe0c6" stroke="#d29a60" stroke-width="4"/>
+    <path d="M255 123c64-43 140-53 235-25v239c-81-24-157-19-235 18z" fill="#f6e8d0" stroke="#d29a60" stroke-width="4"/>
+    <path d="M255 122v233" stroke="#b17649" stroke-width="4"/>
+    <text x="50" y="150" fill="#7c563f" font-family="Georgia, serif" font-size="17" font-style="italic">Today’s work</text>
+    <g font-family="Arial, sans-serif" font-size="17" fill="#294149">
+      <rect x="52" y="179" width="17" height="17" rx="3" fill="none" stroke="#b86f43" stroke-width="2"/><path d="M56 187l5 5 9-11" fill="none" stroke="#b86f43" stroke-width="2.5"/><text x="82" y="193">Context loaded</text>
+      <rect x="52" y="220" width="17" height="17" rx="3" fill="none" stroke="#b86f43" stroke-width="2"/><path d="M56 228l5 5 9-11" fill="none" stroke="#b86f43" stroke-width="2.5"/><text x="82" y="234">Right skills selected</text>
+      <rect x="52" y="261" width="17" height="17" rx="3" fill="none" stroke="#b86f43" stroke-width="2"/><path d="M56 269l5 5 9-11" fill="none" stroke="#b86f43" stroke-width="2.5"/><text x="82" y="275">Boundaries understood</text>
+      <rect x="52" y="302" width="17" height="17" rx="3" fill="none" stroke="#b86f43" stroke-width="2"/><path d="M56 310l5 5 9-11" fill="none" stroke="#b86f43" stroke-width="2.5"/><text x="82" y="316">Ready to build</text>
+    </g>
+    <text x="298" y="166" fill="#f5d79f" font-family="Georgia, serif" font-size="22">Ask only</text>
+    <text x="298" y="195" fill="#f5d79f" font-family="Georgia, serif" font-size="22">what matters.</text>
+    <line x1="298" y1="221" x2="438" y2="221" stroke="#6a8789"/>
+    <text x="298" y="257" fill="#b5c8c7" font-family="Arial, sans-serif" font-size="16">remembered context</text>
+    <text x="298" y="286" fill="#b5c8c7" font-family="Arial, sans-serif" font-size="16">narrow skill choice</text>
+    <text x="298" y="315" fill="#b5c8c7" font-family="Arial, sans-serif" font-size="16">observable done criteria</text>
+    <g transform="translate(405 30)">
+      <path d="M32 10c0-18 10-30 24-30s24 12 24 30" fill="none" stroke="url(#ember)" stroke-width="7" stroke-linecap="round"/>
+      <path d="M26 14h60l10 17H16z" fill="url(#ember)"/>
+      <path d="M22 34h68l-7 95H29z" fill="#0d2028" stroke="url(#ember)" stroke-width="6"/>
+      <path d="M37 49h38l-4 65H41z" fill="#f1b560" fill-opacity=".28"/>
+      <path d="M56 66c-10 13-13 24-9 33 4 8 12 12 20 8 9-5 10-16 4-23-3-3-5-5-5-10-4 4-6 8-6 13-5-4-7-10-4-21z" fill="#f0a147"/>
+    </g>
   </g>
 </svg>
