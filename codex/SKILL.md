@@ -59,3 +59,7 @@ description: Begin a Claude Code or Codex work session with explicit working bou
 - No matching skill: record a gap instead of fabricating one.
 - No memory backend installed: record explicit local notes, not a false capture claim.
 - No trusted Codex hooks: report this limitation instead of promising enforcement.
+
+## Current host contract
+Read `references/claude-current.md` when running in Claude. Preserve the operator's model, effort, provider and approved budget. When Eidolon is installed, use its
+`references/skill-routing.md` at task/phase changes; selection never grants permissions.
