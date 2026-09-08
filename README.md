@@ -1,42 +1,60 @@
 # Setup
 
-A Claude Code skill that begins a work session well.
+A session-start skill for **Claude Code and Codex**. It establishes working
+boundaries, checks claims before calling them done, and keeps a record of both
+mistakes and useful patterns. Eidolon prepares the project; Setup prepares the
+session inside it.
 
-Setup asks you a few short questions up front, then handles three things in
-plain sight: it keeps a memory of what worked and what broke, it checks its own
-claims before it calls them done, and it adapts to how you like to work. You
-answer the questions; it does the rest.
+## Install
 
-It is the sister skill to Eidolon. Eidolon sets up a repository so Claude
-understands it. Setup sets up a session inside it.
+For Codex, clone into a skill directory named `setup`:
 
-## Use
-
-```
-/setup    ask the opening questions and load the parts you choose
+```sh
+mkdir -p ~/.agents/skills
+git clone https://github.com/eidolonofficial/eidolon-setup.git ~/.agents/skills/setup
 ```
 
-You do not need to say the word "setup." It runs at the start of real work.
+For Claude Code, use `~/.claude/skills/setup` instead. For a project-local install,
+use `.agents/skills/setup` or `.claude/skills/setup` inside that project.
+On Windows PowerShell, use `$HOME` in place of `~` if needed.
+An existing destination makes Git stop rather than overwrite your installation.
+For a backed-up replacement or a combined install, use Hearth's installer.
 
-## The opening questions
+Invoke `$setup` in Codex or `/setup` in Claude Code. Both use the same workflow.
+The original workflow is preserved in `references/session-workflow.md`; the
+small root skill supplies the host mapping before it is loaded.
 
-1. Which parts do you want this session: remember, check my work, or both.
-2. How should I treat "go ahead": you checked it, you trust a second look, or do the cheap steps then pause.
-3. How far should I run before checking: one step, until tests pass, or the whole plan.
-4. What kind of work is this: routine, a judgment call, or wrapping up.
+## Opening questions
 
-Your answers set what loads and how careful to be. Setup can also hand them to
-Eidolon by writing a small `.claude/session.yaml` that Eidolon reads, so the two
-skills work together without repeating themselves.
+Which parts should run: memory, verification, or both? How should “go ahead” be
+interpreted? How far should the agent run before checking in? Is this routine
+work, a judgment call, or closeout? Existing answers are reused rather than asked
+again. The optional interview records purpose, users, risks and observable done
+criteria.
 
-## Where this comes from
+## Scope and limits
 
-Setup is the plain-language version of three skills, which stay the source of record:
+This is an instruction skill. Installing it does not automatically install a
+memory server, lifecycle hooks, external tools, or a security boundary. Eidolon's
+separate installer provides host hook wiring. Codex hooks require operator trust;
+its ask-tier operations remain blocked for manual operator review.
 
-- dual-log-memory (the remember part)
-- trust-but-verify (the check part)
-- ai-pairing-playbook (the work-style part)
+The shared `.claude/session.yaml` path is retained so existing Eidolon projects
+continue to work. Codex does not thereby inherit `.claude/settings.json`.
 
-## Status
+## Verification
 
-Early days. Built by Jonah Butterbaugh, alongside Claude.
+```sh
+node --test tests/*.test.mjs
+```
+
+These tests validate packaging and preservation, not live model behavior.
+Check both clients with the Evals in `SKILL.md` before claiming an end-to-end pass.
+
+Sources: OpenAI's official [skills](https://learn.chatgpt.com/docs/build-skills)
+and [hooks](https://learn.chatgpt.com/docs/hooks), checked September 8, 2026.
+
+## License
+
+MIT. Created by Jonah Butterbaugh, alongside Claude. The original memory,
+verification, and pairing skills remain credited in the preserved workflow.
