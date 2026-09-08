@@ -61,7 +61,7 @@ Codex ask-tier operations remain conservative and require operator trust/manual 
 node --test tests/*.test.mjs
 ```
 
-The tests cover packaging, workflow preservation, narrow skill selection, gap behavior, host semantics, and delegation restraint. They do not claim live authenticated model behavior; use the evals in [`SKILL.md`](SKILL.md) before making an end-to-end claim.
+The tests cover packaging, workflow preservation, narrow skill selection, gap behavior, host semantics, and delegation restraint. They validate packaging and instruction contracts, **not live model behavior**. Use the evals in [`SKILL.md`](SKILL.md) before making an end-to-end claim.
 
 ## The family
 
