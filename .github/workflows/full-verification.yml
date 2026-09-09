@@ -1,0 +1,40 @@
+name: Full Setup verification
+on:
+  push:
+    branches: [main, ci/github-verification-20260909]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+      - name: Run every packaging, record and interview contract regression
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p .ci-evidence
+          git rev-parse HEAD > .ci-evidence/commit.txt
+          node --version > .ci-evidence/node-version.txt
+          node --test --test-reporter=tap tests/*.test.mjs 2>&1 | tee .ci-evidence/tests.tap
+      - name: Preserve actual test output
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: setup-verification-${{ runner.os }}
+          path: .ci-evidence/
+          include-hidden-files: true
+          retention-days: 7
+          if-no-files-found: error
