@@ -1,7 +1,7 @@
 name: Full Setup verification
 on:
   push:
-    branches: [ci/github-verification-20260909]
+    branches: [main, ci/github-verification-20260909]
   pull_request:
   workflow_dispatch:
 permissions:
