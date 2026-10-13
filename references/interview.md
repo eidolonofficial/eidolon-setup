@@ -1,6 +1,10 @@
 # Interview Me: the question bank and the brain dump
 
-This file is a vendored copy of eidolon's references/interview.md (source: C:/Users/strid/projects/eidolon/references/interview.md), so Setup installs alone. Keep it in step with the source.
+This file is a vendored copy of eidolon's references/interview.md so Setup installs alone.
+
+Source: the eidolon repository, references/interview.md (vendored; keep the body identical from the Design rules heading down).
+
+References in the body to autopilot-guide.md, the SPECIFY stage, conductor-standard.md and .claude/autopilot/ belong to Eidolon and apply when Eidolon is installed.
 
 ## Design rules
 

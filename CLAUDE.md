@@ -5,7 +5,8 @@ broke, checks its own claims, and adapts to how the person likes to work.
 They answer the questions; Claude does the rest.
 
 Use `/setup` and the root `SKILL.md`. Keep the original workflow in
-`references/session-workflow.md` and the question bank in `references/interview.md`; load the three parts only when they are needed.
+`references/session-workflow.md` and the question bank in
+`references/interview.md`; load the three parts only when they are needed.
 For repository maintenance, follow the requested change rather than opening a new
 interview. Loading this file does not authorize installation or start a memory service.
 

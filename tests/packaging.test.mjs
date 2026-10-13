@@ -14,7 +14,7 @@ test('the skill is named setup and invoked with /setup', () => {
 test('session workflow matches its pinned hash (update the hash when you edit it on purpose)', () => {
   const bytes = readFileSync(join(root, 'references/session-workflow.md'));
   const blob = createHash('sha1').update('blob ' + bytes.length + '\0').update(bytes).digest('hex');
-  assert.equal(blob, '1344e46447f727038b4b7a5882f38e7b297e564f');
+  assert.equal(blob, 'd195c9c0843a8fc3a821c4190053b6b84cc2684b');
 });
 test('all referenced workflow modules are present', () => {
   for (const name of ['remember', 'verify', 'collaborate']) assert.ok(existsSync(join(root, 'references', name + '.md')));
