@@ -1,6 +1,6 @@
 ---
 name: setup
-description: Asks you a few quick questions when you start real work on a project, so Claude knows how you want to work that session, with an optional deeper interview when you want Claude to fully understand what you are building. It then keeps a running memory of what worked and what broke, and double-checks its own claims before calling anything done. Use it at the start of a work session, when you want Claude to remember things between sessions, or when you want it to check its own work as it goes. You do not need to say the word Setup.
+description: Asks you a few quick questions when you start real work on a project, so Claude knows how you want to work that session, with an optional deeper interview when you want Claude to fully understand what you are building. It then keeps a running memory of what worked and what broke, and double-checks its own claims before calling anything done. Use it at the start of a work session, when you want Claude to remember things between sessions, or when you want it to check its own work as it goes. Not for answering a single one-off question that starts no session. You do not need to say the word Setup.
 trigger: /setup
 ---
 
