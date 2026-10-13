@@ -55,12 +55,8 @@ At the start of real work, ask a few short questions. Use tap-to-answer
 buttons, not a wall of text. Match the person's tone: if they are short and
 direct, give one path and act; if they say "let's explore", offer options.
 
-```
-1. Which parts do you want this session?   remember / check-my-work / both
-2. How should I treat "go ahead"?          you checked it / you trust a second look / do cheap steps then pause
-3. How far should I run before checking?   one step / until tests pass / the whole plan
-4. What kind of work is this?              routine / a judgment call / wrapping up
-```
+The questions and their chip options live in `references/interview.md`. Ask those,
+not a restated copy.
 
 The answers are not thrown away. They set what loads and how careful to be,
 and the work itself gets recorded (see "the shared base").
@@ -71,11 +67,7 @@ People come to this at every level, and there is no wrong answer. Near the
 start, ask how familiar the person is with coding and engineering, so you can
 pitch everything right:
 
-```
-People come to this at all different levels, and there is no wrong answer.
-How familiar are you with coding and engineering?
-  new to this  /  some familiarity  /  comfortable, I code  /  expert
-```
+The familiarity question and its options live in `references/interview.md`.
 
 This sets how plainly you talk and how often you check in:
 

@@ -1,7 +1,7 @@
 name: Skill compatibility
 on:
   push:
-    branches: [main, release/codex-claude-compat]
+    branches: [main]
   pull_request:
 permissions:
   contents: read
