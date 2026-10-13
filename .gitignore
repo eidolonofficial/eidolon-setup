@@ -31,5 +31,10 @@ npm-debug.log*
 graphify-out/
 .graphify_cache/
 
+# Local Claude Code wiring (machine-specific - never commit)
+.claude/settings.local.json
+.claude/session.yaml
+mempalace.yaml
+
 # Logs
 *.log

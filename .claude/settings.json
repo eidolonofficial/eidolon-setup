@@ -1,0 +1,20 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          { "type": "command", "command": "node", "args": ["hooks/protected-paths-guard.mjs"], "timeout": 10 },
+          { "type": "command", "command": "node", "args": ["hooks/commit-quality-guard.mjs"], "timeout": 10 }
+        ]
+      },
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          { "type": "command", "command": "node", "args": ["hooks/doc-integrity-guard.mjs"], "timeout": 10 },
+          { "type": "command", "command": "node", "args": ["hooks/hedge-guard.mjs"], "timeout": 10 }
+        ]
+      }
+    ]
+  }
+}

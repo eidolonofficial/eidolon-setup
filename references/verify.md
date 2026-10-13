@@ -14,7 +14,7 @@ For anything load-bearing:
 3. Decide what counts as pass or fail before you run it.
 4. Run it, keep the result, and act on what you found.
 
-This is the before_done check from the shared base (your uncertainty protocol).
+This is the before_done check from the shared base (upstream: the uncertainty protocol).
 A good check has three properties: it is independent of the first signal, it
 rests on a real and current source, and you set pass or fail before running it.
 Hedged words ("should work", "probably", "I think") are the tell that a claim
@@ -26,10 +26,9 @@ The check applies to everything, including rules this skill itself wrote. A
 claim you cannot test with an independent, real, pass-or-fail signal does not
 ship as a finding. Drop it, or mark it unsure and hand it to a person.
 
-## One at a time, root cause first
+## Findings and root cause
 
-Surface findings one at a time, not as a wall. For a serious one, work out the
-likely root cause and show it before offering any fix.
+Batch concise actionable findings with evidence and severity. Use one-at-a-time dialogue only when requested. For a serious defect, investigate the likely root cause before an authorized fix.
 
 ## Label honestly
 
@@ -62,11 +61,11 @@ list for security, WCAG for accessibility). Do not invent a source.
 
 before_done has a mirror: before_reuse, in remember.md. One proves a worry is
 handled before you call something done; the other proves a good pattern
-transfers before you save it as a rule. Same check, opposite directions. Run
-both.
+transfers before you save it as a rule. Apply the relevant check: verify an outcome before completion, and test transfer when recording a reusable lesson.
 
 ## Source
 
-This is the plain-English version of your trust-but-verify skill, which stays
-the source of record (github.com/gmrmk/trust-but-verify). Internal name: the
-before_done check is your uncertainty protocol.
+This is the plain-English version of the trust-but-verify skill, which stays
+the source of record (github.com/gmrmk/trust-but-verify). It does not need to
+be installed: this file stands alone. Upstream name: the before_done check is
+the uncertainty protocol.

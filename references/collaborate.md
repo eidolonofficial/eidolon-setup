@@ -6,15 +6,13 @@ SKILL.md.
 
 ## Six habits
 
-The first four are the opening questions in SKILL.md. All six live here so the
-intent is in one place.
+These are optional collaboration examples. Reuse known preferences; the entrypoint does not require an opening interview.
 
 1. Say which parts are on at the start. "Remember and check this session." A
    few seconds up front saves a mid-task correction.
 2. Be clear what "go ahead" means. Three kinds: "I checked it, go"; "I trust a
    second look, go"; "do the cheap steps then stop before anything that changes
-   state". The third is the safest default for any chain that ends in a write,
-   a commit, or a delete.
+   state". Apply the user's chosen scope; reversible work already authorized does not need another stop at every write.
 3. Say where auto-mode stops. "Auto through the edits, stop before the commit."
    "Auto until tests pass, then check with me."
 4. Send a whole thought at once. If it is long, say "three things coming, hold",
@@ -36,11 +34,10 @@ judgment call  design choices, unclear specs, "one thing or two?". Needs
                reading to verify. Claude does one task, then shows you the result.
 wrapping up    summaries, sign-off, commit messages. Claude is weakest here,
                because polished writing feels finished even when it is wrong.
-               You make the final call; Claude drafts for you to approve.
+               Verify completion from evidence. Seek ratification only for a decision the user reserved.
 ```
 
-Name which one you are in at the start, so it can be corrected before things
-drift. When wrapping up matters, a fresh check helps: open a new session, give
+Name the decision mode only when it helps resolve a real ambiguity. When wrapping up matters, a fresh check helps: open a new session, give
 it only the change and the question "what is overclaimed here?", with none of
 the momentum to defend the work.
 
@@ -106,7 +103,8 @@ it fixes the next ten moments. When there is time, give the reason.
 
 ## Source
 
-This is the plain-English version of your ai-pairing-playbook skill, which
-stays the source of record (github.com/gmrmk/ai-pairing-playbook). Internal
-names: the six habits are your 6 prompt-shifts, the three kinds of work are your
-work-lanes, and the watch words are your drift-tell catalog.
+This is the plain-English version of the ai-pairing-playbook skill, which
+stays the source of record (github.com/gmrmk/ai-pairing-playbook). It does not
+need to be installed: this file stands alone. Upstream names: the six habits
+are the playbook's 6 prompt-shifts, the three kinds of work are its work-lanes,
+and the watch words are its drift-tell catalog.
